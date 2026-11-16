@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="পদ্যপথ — বাংলা কবিতার সুন্দর আসর। রবীন্দ্রনাথ, নজরুল, জীবনানন্দসহ প্রিয় কবিদের কবিতা পড়ুন, নিজের কবিতা জমা দিন ও বন্ধুদের সাথে শেয়ার করুন।" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#f7f4ef" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://podyopath.vercel.app/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Open Graph (Facebook, WhatsApp, Messenger, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="পদ্যপথ" />
+  <meta property="og:locale" content="bn_BD" />
+  <meta property="og:title" content="পদ্যপথ — বাংলা কবিতার আসর" />
+  <meta property="og:description" content="পদ্যপথ — বাংলা কবিতার সুন্দর আসর। রবীন্দ্রনাথ, নজরুল, জীবনানন্দসহ প্রিয় কবিদের কবিতা পড়ুন, নিজের কবিতা জমা দিন ও বন্ধুদের সাথে শেয়ার করুন।" />
+  <meta property="og:url" content="https://podyopath.vercel.app/" />
+  <meta property="og:image" content="https://podyopath.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="পদ্যপথ — বাংলা কবিতার আসর" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="পদ্যপথ — বাংলা কবিতার আসর" />
+  <meta name="twitter:description" content="পদ্যপথ — বাংলা কবিতার সুন্দর আসর। রবীন্দ্রনাথ, নজরুল, জীবনানন্দসহ প্রিয় কবিদের কবিতা পড়ুন, নিজের কবিতা জমা দিন ও বন্ধুদের সাথে শেয়ার করুন।" />
+  <meta name="twitter:image" content="https://podyopath.vercel.app/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"পদ্যপথ","alternateName":"Podyopath","url":"https://podyopath.vercel.app/","inLanguage":"bn","description":"বাংলা কবিতার সুন্দর আসর","author":{"@type":"Person","name":"Miraj Ahmad"}}
+  </script>
+  <title>পদ্যপথ — বাংলা কবিতার আসর</title>
+
+  <!-- Google Fonts: Noto Sans Bengali -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===================== CSS Variables ===================== */
+    :root {
+      --bg: #f7f4ef;
+      --bg-card: #ffffff;
+      --text: #1a1a1a;
+      --text-soft: #5c5c5c;
+      --primary: #1e3a5f;
+      --primary-light: #2c5282;
+      --accent: #b8860b;
+      --accent-soft: #f5e6c8;
+      --border: #e8e0d5;
+      --shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
+      --radius: 12px;
+      --nav-h: 70px;
+      --transition: 0.25s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f1419;
+      --bg-card: #1a2332;
+      --text: #e8e6e3;
+      --text-soft: #a0a0a0;
+      --primary: #7eb8da;
+      --primary-light: #a8d4f0;
+      --accent: #e0b84a;
+      --accent-soft: #3d3420;
+      --border: #2a3544;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ===================== Reset & Base ===================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: "Noto Sans Bengali", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background var(--transition), color var(--transition);
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button, input, textarea, select {
+      font-family: inherit;
+      font-size: inherit;
+      border: none;
+      outline: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin-inline: auto;
+    }
+
+    /* ===================== Navigation ===================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-h);
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: background var(--transition);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .logo {
+      font-family: "Playfair Display", "Noto Sans Bengali", serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      color: var(--text);
+    }
+
+    .icon-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem;
+      transform: translateY(-120%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s ease;
+      z-index: 999;
+    }
+
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.85rem 0;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* ===================== Hero ===================== */
+    .hero {
+      padding: calc(var(--nav-h) + 4rem) 0 4rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--accent-soft) 40%, var(--bg)) 100%);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", "Noto Sans Bengali", serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      max-width: 540px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(30, 58, 95, 0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===================== Section Common ===================== */
+    section {
+      padding: 4.5rem 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", "Noto Sans Bengali", serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+    }
+
+    /* ===================== Daily Poem ===================== */
+    .daily-poem {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .daily-poem::before {
+      content: """;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-size: 8rem;
+      font-family: Georgia, serif;
+      color: var(--accent);
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .daily-label {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      margin-bottom: 1.2rem;
+    }
+
+    .daily-poem h2 {
+      font-family: "Playfair Display", "Noto Sans Bengali", serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .daily-poem .poet {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .daily-poem .poem-body {
+      font-size: 1.15rem;
+      line-height: 2;
+      white-space: pre-line;
+      max-width: 520px;
+    }
+
+    /* ===================== Categories ===================== */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+
+    .cat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .cat-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .cat-card .icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cat-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* ===================== Poem Cards ===================== */
+    .poems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .poem-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .poem-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary);
+    }
+
+    .poem-card .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.7rem;
+      border-radius: 50px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+      width: fit-content;
+    }
+
+    .poem-card h3 {
+      font-family: "Playfair Display", "Noto Sans Bengali", serif;
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+      color: var(--primary);
+    }
+
+    .poem-card .poet-name {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .poem-card .excerpt {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.7;
+      flex-grow: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .poem-card .card-footer {
+      margin-top: 1.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    /* ===================== Filters ===================== */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* ===================== Submit Form ===================== */
+    .submit-section {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 8%, var(--bg)), var(--bg));
+    }
+
+    .form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.45rem;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      transition: border-color var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--primary);
+    }
+
+    .form-group textarea {
+      min-height: 180px;
+      resize: vertical;
+      line-height: 1.7;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-note {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* ===================== Modal (Poem View) ===================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      padding: 1rem;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      width: min(560px, 100%);
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+      transform: translateY(30px);
+      transition: transform 0.3s;
+    }
+
+    .modal-overlay.open .modal {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .modal h2 {
+      font-family: "Playfair Display", "Noto Sans Bengali", serif;
+      font-size: 1.7rem;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+      padding-right: 2rem;
+    }
+
+    .modal .poet {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal .poem-full {
+      font-size: 1.15rem;
+      line-height: 2.1;
+      white-space: pre-line;
+      margin-bottom: 1.8rem;
+    }
+
+    /* Share buttons */
+    .share-section {
+      border-top: 1px solid var(--border);
+      padding-top: 1.3rem;
+      margin-top: 0.5rem;
+    }
+
+    .share-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-soft);
+      margin-bottom: 0.8rem;
+    }
+
+    .share-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .share-btn.facebook:hover { background: #1877f2; color: #fff; border-color: #1877f2; }
+    .share-btn.twitter:hover  { background: #000; color: #fff; border-color: #000; }
+    .share-btn.whatsapp:hover { background: #25d366; color: #fff; border-color: #25d366; }
+    .share-btn.copy:hover     { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+
+    /* ===================== Search ===================== */
+    .search-box {
+      position: relative;
+      max-width: 420px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.9rem 1.2rem 0.9rem 3rem;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent);
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 1.1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-soft);
+      pointer-events: none;
+    }
+
+    /* ===================== Footer ===================== */
+    footer {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .logo {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-brand p {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--text-soft);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      transition: color var(--transition);
+    }
+
+    .footer-col a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-soft);
+      font-size: 0.85rem;
+    }
+
+    /* ===================== Toast ===================== */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--primary);
+      color: #fff;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      z-index: 3000;
+      opacity: 0;
+      transition: all 0.4s;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ===================== Empty State ===================== */
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-soft);
+    }
+
+    /* ===================== Responsive ===================== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero { padding: calc(var(--nav-h) + 2.5rem) 0 3rem; }
+      .hero h1 { font-size: 1.9rem; }
+
+      .daily-poem { padding: 1.8rem; }
+      .daily-poem .poem-body { font-size: 1.05rem; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+      }
+
+      .poems-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 3rem 0; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-btns { flex-direction: column; align-items: center; }
+      .btn { width: 100%; justify-content: center; max-width: 280px; }
+    }
+
+    /* ===================== v2: Actions, Favorites, Admin ===================== */
+    .action-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.4rem; }
+    .act-btn {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      padding: 0.5rem 1.05rem; border-radius: 50px;
+      background: var(--bg); border: 1px solid var(--border); color: var(--text-soft);
+      font-weight: 500; font-size: 0.88rem; cursor: pointer; transition: all var(--transition);
+    }
+    .act-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .act-btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+    .act-btn.on svg, .mini-btn.on svg { fill: currentColor; }
+    .act-btn:focus-visible, .mini-btn:focus-visible, .poem-card:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px;
+    }
+    .card-meta { display: flex; align-items: center; gap: 1rem; }
+    .mini-btn {
+      display: inline-flex; align-items: center; gap: 0.35rem; background: none;
+      color: var(--text-soft); cursor: pointer; padding: 0.15rem; font-size: 0.85rem;
+      transition: color var(--transition);
+    }
+    button.mini-btn:hover, .mini-btn.on { color: var(--accent); }
+
+    .admin-wrap { max-width: 820px; margin: 0 auto; }
+    .admin-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .admin-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .admin-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem 1.5rem; margin-bottom: 1rem; }
+    .admin-item h3 { font-size: 1.15rem; color: var(--primary); }
+    .admin-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 0.4rem; font-size: 0.85rem; color: var(--text-soft); }
+    .admin-item .tag { margin-bottom: 0; }
+    .admin-item .poem-body { font-size: 1rem; line-height: 1.9; max-height: 9rem; overflow: auto; margin: 0.8rem 0 1rem; max-width: none; color: var(--text-soft); }
+    .admin-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .btn-sm { padding: 0.5rem 1.2rem; font-size: 0.88rem; }
+    .btn-danger { background: transparent; border: 2px solid #c0392b; color: #c0392b; }
+    .btn-danger:hover { background: #c0392b; color: #fff; }
+
+    /* ===================== v3: Poet page, skeleton, pager ===================== */
+    #filters, #poetHero { scroll-margin-top: calc(var(--nav-h) + 1rem); }
+    .poet-link { color: inherit; }
+    .poet-link:hover { color: var(--accent); text-decoration: underline; }
+    .poet-hero { display: flex; align-items: center; gap: 1.3rem; margin: 1.5rem 0 2rem; padding: 1.6rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .poet-avatar { width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-size: 1.9rem; font-weight: 700; }
+    .poet-hero h2 { font-size: 1.6rem; color: var(--primary); line-height: 1.3; }
+    .poet-hero p { color: var(--text-soft); }
+    .result-info { color: var(--text-soft); font-size: 0.9rem; margin: -0.4rem 0 1.2rem; min-height: 1.4em; }
+    .pager { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.4rem; margin-top: 2.5rem; }
+    .pg-btn { min-width: 40px; height: 40px; padding: 0 0.8rem; border-radius: 50px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-soft); font-weight: 500; cursor: pointer; transition: all var(--transition); }
+    .pg-btn:hover:not(:disabled) { border-color: var(--primary); color: var(--primary); }
+    .pg-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .pg-btn:disabled { opacity: 0.4; cursor: default; }
+    .pg-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .pg-gap { align-self: center; color: var(--text-soft); padding: 0 0.2rem; }
+    .sk { display: block; border-radius: 6px; background: linear-gradient(90deg, var(--border) 25%, color-mix(in srgb, var(--border) 35%, var(--bg-card)) 50%, var(--border) 75%); background-size: 200% 100%; animation: sk-shimmer 1.3s linear infinite; }
+    @keyframes sk-shimmer { to { background-position: -200% 0; } }
+    .sk-card { pointer-events: none; }
+    @media (prefers-reduced-motion: reduce) { .sk { animation: none; } }
+    .dev-credit { display: inline-block; margin-top: 0.4rem; }
+    .dev-credit a { color: var(--accent); font-weight: 600; }
+    .dev-credit a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo" onclick="showSection('home')">পদ্য<span>পথ</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#" class="active" data-section="home">হোম</a></li>
+        <li><a href="#" data-section="poems">কবিতা</a></li>
+        <li><a href="#" data-section="submit">লিখুন</a></li>
+        <li><a href="#" data-section="about">সম্পর্কে</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" title="থিম পরিবর্তন" aria-label="থিম পরিবর্তন">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <div class="hamburger" id="hamburger" aria-label="মেনু">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" data-section="home">হোম</a>
+    <a href="#" data-section="poems">কবিতা</a>
+    <a href="#" data-section="submit">কবিতা লিখুন</a>
+    <a href="#" data-section="about">সম্পর্কে</a>
+  </div>
+
+  <!-- ===================== HOME SECTION ===================== -->
+  <div id="home-section">
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container">
+        <h1>বাংলা কবিতার<br>সুন্দর আসর</h1>
+        <p>রবীন্দ্রনাথ থেকে সমকালীন কবিদের অমর সৃষ্টি পড়ুন, নিজের কবিতা লিখুন এবং অন্যদের সাথে শেয়ার করুন।</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" onclick="showSection('poems')">কবিতা পড়ুন</button>
+          <button class="btn btn-outline" onclick="showSection('submit')">কবিতা লিখুন</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Daily Poem -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">আজকের কবিতা</h2>
+            <p class="section-subtitle">প্রতিদিন একটি বিশেষ কবিতা</p>
+          </div>
+        </div>
+
+        <div class="daily-poem" id="dailyPoem">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">বিষয় অনুসারে</h2>
+            <p class="section-subtitle">আপনার পছন্দের বিষয় বেছে নিন</p>
+          </div>
+        </div>
+
+        <div class="categories" id="categories">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Poems -->
+    <section style="padding-top: 1rem;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">নির্বাচিত কবিতা</h2>
+            <p class="section-subtitle">কিছু অমর সৃষ্টি</p>
+          </div>
+          <button class="btn btn-outline" style="padding: 0.6rem 1.3rem; font-size: 0.9rem;" onclick="showSection('poems')">সব দেখুন →</button>
+        </div>
+
+        <div class="poems-grid" id="featuredPoems">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== POEMS SECTION ===================== -->
+  <div id="poems-section" style="display: none; padding-top: calc(var(--nav-h) + 2rem);">
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">সকল কবিতা</h2>
+            <p class="section-subtitle">কবি, বিষয় বা শিরোনাম দিয়ে খুঁজুন</p>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input type="text" id="searchInput" placeholder="কবিতা বা কবির নাম লিখুন..." />
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="all">সব</button>
+          <button class="filter-btn" data-filter="প্রেম">প্রেম</button>
+          <button class="filter-btn" data-filter="প্রকৃতি">প্রকৃতি</button>
+          <button class="filter-btn" data-filter="দেশ">দেশ</button>
+          <button class="filter-btn" data-filter="জীবন">জীবন</button>
+          <button class="filter-btn" data-filter="বিদ্রোহ">বিদ্রোহ</button>
+          <button class="filter-btn" data-filter="__fav">সংরক্ষিত</button>
+        </div>
+
+        <div class="result-info" id="resultInfo" aria-live="polite"></div>
+        <div class="poems-grid" id="allPoems"></div>
+        <nav class="pager" id="pager" aria-label="পাতা"></nav>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== SUBMIT SECTION ===================== -->
+  <div id="submit-section" style="display: none; padding-top: calc(var(--nav-h) + 1rem);">
+    <section class="submit-section">
+      <div class="container">
+        <div class="section-header" style="justify-content: center; text-align: center;">
+          <div>
+            <h2 class="section-title">আপনার কবিতা লিখুন</h2>
+            <p class="section-subtitle">পদ্যপথে আপনার সৃষ্টিকে জায়গা দিন</p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <!-- 
+            Formspree সেটআপ:
+            1. https://formspree.io তে অ্যাকাউন্ট খুলুন
+            2. নতুন ফর্ম তৈরি করুন
+            3. নিচের action URL এ আপনার ফর্ম ID বসান
+               উদাহরণ: https://formspree.io/f/xyzabcde
+          -->
+          <form id="poemForm" action="https://formspree.io/f/mkjrjrvn" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="poetName">আপনার নাম *</label>
+                <input type="text" id="poetName" name="name" required maxlength="60" placeholder="যেমন: রহিম উদ্দিন" />
+              </div>
+              <div class="form-group">
+                <label for="poemTitle">কবিতার শিরোনাম *</label>
+                <input type="text" id="poemTitle" name="title" required maxlength="120" placeholder="কবিতার নাম" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="category">বিষয়</label>
+              <select id="category" name="category">
+                <option value="জীবন">জীবন</option>
+                <option value="প্রেম">প্রেম</option>
+                <option value="প্রকৃতি">প্রকৃতি</option>
+                <option value="দেশ">দেশ</option>
+                <option value="বিদ্রোহ">বিদ্রোহ</option>
+                <option value="অন্যান্য">অন্যান্য</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="poemBody">কবিতা *</label>
+              <textarea id="poemBody" name="message" required maxlength="5000" placeholder="এখানে আপনার কবিতা লিখুন..."></textarea>
+            </div>
+
+            <!-- Formspree hidden fields -->
+            <input type="hidden" name="_subject" value="পদ্যপথ — নতুন কবিতা জমা পড়েছে" />
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; justify-content: center;">
+              কবিতা জমা দিন
+            </button>
+
+            <p class="form-note">
+              জমা দেওয়ার পর আপনার ইমেইলে নোটিফিকেশন যাবে এবং মডারেশন শেষে কবিতাটি সাইটে প্রকাশিত হবে।
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <div id="about-section" style="display: none; padding-top: calc(var(--nav-h) + 2rem);">
+    <section>
+      <div class="container" style="max-width: 720px;">
+        <div class="section-header" style="justify-content: center; text-align: center;">
+          <div>
+            <h2 class="section-title">পদ্যপথ সম্পর্কে</h2>
+          </div>
+        </div>
+
+        <div class="daily-poem" style="text-align: center;">
+          <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem;">
+            <strong>পদ্যপথ</strong> বাংলা কবিতার একটি উন্মুক্ত আসর। এখানে ক্লাসিক থেকে সমকালীন — সব ধরনের কবিতা একত্রিত করা হয়েছে।
+          </p>
+          <p style="font-size: 1.05rem; color: var(--text-soft); line-height: 1.8;">
+            আমাদের লক্ষ্য হলো বাংলা কবিতাকে আরও সহজলভ্য করা এবং নতুন কবিদের জন্য একটি সুন্দর প্ল্যাটফর্ম তৈরি করা। আপনি শুধু পড়বেন না, নিজেও লিখতে পারবেন।
+          </p>
+          <br />
+          <p style="color: var(--accent); font-weight: 500;">
+            “কবিতা হলো হৃদয়ের ভাষা”
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== POET SECTION (#poet=NAME) ===================== -->
+  <div id="poet-section" style="display: none; padding-top: calc(var(--nav-h) + 2rem);">
+    <section>
+      <div class="container">
+        <button class="btn btn-outline btn-sm" type="button" data-section="poems">← সব কবিতা</button>
+        <div class="poet-hero" id="poetHero"></div>
+        <div class="poems-grid" id="poetPoems"></div>
+        <nav class="pager" id="poetPager" aria-label="পাতা"></nav>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== ADMIN SECTION (#admin) ===================== -->
+  <div id="admin-section" style="display: none; padding-top: calc(var(--nav-h) + 2rem);">
+    <section>
+      <div class="container admin-wrap">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">অ্যাডমিন প্যানেল</h2>
+            <p class="section-subtitle">জমা পড়া কবিতা যাচাই ও প্রকাশ</p>
+          </div>
+        </div>
+
+        <div id="adminLogin" class="form-card">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="adminEmail">ইমেইল</label>
+              <input type="email" id="adminEmail" required autocomplete="username" />
+            </div>
+            <div class="form-group">
+              <label for="adminPass">পাসওয়ার্ড</label>
+              <input type="password" id="adminPass" required autocomplete="current-password" />
+            </div>
+            <button type="submit" class="btn btn-primary" id="loginBtn" style="width: 100%; justify-content: center;">প্রবেশ করুন</button>
+          </form>
+        </div>
+
+        <div id="adminPanel" style="display: none;">
+          <div class="admin-bar">
+            <div class="admin-tabs" id="adminTabs">
+              <button class="filter-btn active" data-tab="pending">অপেক্ষমাণ (<span id="pendingCount">০</span>)</button>
+              \1\n              <button class="filter-btn" data-tab="new">+ নতুন কবিতা</button>
+            </div>
+            <button class="btn btn-outline btn-sm" id="logoutBtn" type="button">বের হোন</button>
+          </div>
+          <div id="legacyNotice"></div>
+          <div id="adminList"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">পদ্য<span>পথ</span></div>
+          <p>বাংলা কবিতার সুন্দর ও উন্মুক্ত আসর। পড়ুন, লিখুন, অনুভব করুন।</p>
+        </div>
+        <div class="footer-col">
+          <h4>নেভিগেশন</h4>
+          <a href="#" onclick="showSection('home')">হোম</a>
+          <a href="#" onclick="showSection('poems')">কবিতা</a>
+          <a href="#" onclick="showSection('submit')">লিখুন</a>
+          <a href="#" onclick="showSection('about')">সম্পর্কে</a>
+        </div>
+        <div class="footer-col">
+          <h4>বিষয়</h4>
+          <a href="#" onclick="filterByCategory('প্রেম')">প্রেম</a>
+          <a href="#" onclick="filterByCategory('প্রকৃতি')">প্রকৃতি</a>
+          <a href="#" onclick="filterByCategory('দেশ')">দেশ</a>
+          <a href="#" onclick="filterByCategory('জীবন')">জীবন</a>
+        </div>
+      </div>
+      \1\2<br><span class="dev-credit">Developer: <a href="https://www.facebook.com/share/1BjEibwujw/" target="_blank" rel="noopener noreferrer">Miraj Ahmad</a></span>\3
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL ===================== -->
+  <div class="modal-overlay" id="poemModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="বন্ধ করুন">×</button>
+      <h2 id="modalTitle"></h2>
+      <div class="poet" id="modalPoet"></div>
+      <div class="poem-full" id="modalBody"></div>
+
+      <div class="action-bar">
+        <button class="act-btn" id="likeBtn" type="button" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg> <span id="likeCount">০</span></button>
+        <button class="act-btn" id="favBtn" type="button" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> <span>সংরক্ষণ</span></button>
+        <button class="act-btn" id="cardBtn" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> <span>ছবি কার্ড</span></button>
+        <button class="act-btn" id="linkBtn" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg> <span>লিংক কপি</span></button>
+      </div>
+
+      <div class="share-section">
+        <div class="share-label">শেয়ার করুন</div>
+        <div class="share-btns">
+          <button class="share-btn facebook" onclick="sharePoem('facebook')" title="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </button>
+          <button class="share-btn twitter" onclick="sharePoem('twitter')" title="X (Twitter)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.792l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+            X
+          </button>
+          <button class="share-btn whatsapp" onclick="sharePoem('whatsapp')" title="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </button>
+          <button class="share-btn copy" onclick="sharePoem('copy')" title="লিংক কপি">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            কপি
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+
+  <!-- Firebase SDK (Compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-check-compat.js"></script>
+
+  <script>
+    /* ===================== FIREBASE CONFIG ===================== */
+    const firebaseConfig = {
+      apiKey: "AIzaSyBOZzeZs7XOmAMRa1vPsF5pPpC6AlpwxQ4",
+      authDomain: "podyopath.firebaseapp.com",
+      projectId: "podyopath",
+      storageBucket: "podyopath.firebasestorage.app",
+      messagingSenderId: "624177997160",
+      appId: "1:624177997160:web:2bb548a71ad3bcd92ce2dd"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // App Check: Firebase Console > App Check এ reCAPTCHA v3 সাইট কী বানিয়ে এখানে বসান
+    const RECAPTCHA_SITE_KEY = "";
+    if (RECAPTCHA_SITE_KEY) {
+      if (["localhost", "127.0.0.1"].includes(location.hostname)) self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+      firebase.appCheck().activate(RECAPTCHA_SITE_KEY, true);
+    }
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+
+    /* ===================== DEFAULT POEMS (seed if empty) ===================== */
+    const defaultPoems = [
+      {
+        title: "নিশীথে",
+        poet: "জীবনানন্দ দাশ",
+        category: "প্রকৃতি",
+        body: "পৃথিবীর পথে আমি অনেক ঘুরেছি,\nঅনেক ঘাটে নেমেছি,\nঅনেক মাঠের ধারে বসেছি,\nঅনেক নদীর জলে পা ডুবিয়েছি।\n\nতবুও মনে হয়\nআমি কিছুই দেখিনি,\nকিছুই জানিনি।",
+        excerpt: "পৃথিবীর পথে আমি অনেক ঘুরেছি, অনেক ঘাটে নেমেছি..."
+      },
+      {
+        title: "বিদ্রোহী",
+        poet: "কাজী নজরুল ইসলাম",
+        category: "বিদ্রোহ",
+        body: "বল বীর —\nবল উন্নত মম শির!\nশির নেহারি আমারি নতশির ওই শিখর হিমাদ্রির!\nবল বীর —\nবল মহাবিশ্বের মহাকাশ ফাড়ি’\nচন্দ্র সূর্য্য গ্রহ তারাছাড়া\nভুলোক দ্যুলোক গোলকপাতাল\nতোরে আমি ভূমা বিস্ময়!",
+        excerpt: "বল বীর — বল উন্নত মম শির! শির নেহারি আমারি নতশির..."
+      },
+      {
+        title: "তোমার খোলা জানালা",
+        poet: "রবীন্দ্রনাথ ঠাকুর",
+        category: "প্রেম",
+        body: "তোমার খোলা জানালা দিয়ে আসছে বাতাস,\nআমার মনে পড়ছে সেই দিনের কথা।\nযখন তুমি হাসিতে হাসিতে\nবলেছিলে — এসো।\n\nআজ সেই জানালা খোলা,\nকিন্তু তুমি নেই।",
+        excerpt: "তোমার খোলা জানালা দিয়ে আসছে বাতাস, আমার মনে পড়ছে..."
+      },
+      {
+        title: "আবার আসিব ফিরে",
+        poet: "জীবনানন্দ দাশ",
+        category: "জীবন",
+        body: "আবার আসিব ফিরে ধানসিঁড়িটির তীরে\nএই বাংলায় —\nহয়তো মানুষ নয় —\nহয়তো বা শঙ্খচিল শালিখের বেশে,\nসন্ধ্যার নদীর নীল জলে ভেসে আসা\nএকটি সাদা হাঁস।",
+        excerpt: "আবার আসিব ফিরে ধানসিঁড়িটির তীরে এই বাংলায়..."
+      },
+      {
+        title: "কাজলি",
+        poet: "সুকুমার রায়",
+        category: "জীবন",
+        body: "কাজলি হলো একটা ছোট্ট পাখি,\nসে গান গায় রোজ সকালে।\nকেউ শোনে না তার গান,\nতবু সে গায়।\n\nকারণ গান গাওয়াই তার কাজ।",
+        excerpt: "কাজলি হলো একটা ছোট্ট পাখি, সে গান গায় রোজ সকালে..."
+      },
+      {
+        title: "একুশে ফেব্রুয়ারি",
+        poet: "আবদুল গাফফার চৌধুরী",
+        category: "দেশ",
+        body: "আমার ভাইয়ের রক্তে রাঙানো একুশে ফেব্রুয়ারি\nআমি কি ভুলিতে পারি\nছেলেহারা শত মায়ের অশ্রুগড়া এ ফেব্রুয়ারি\nআমি কি ভুলিতে পারি\nআমার সোনার দেশের রক্তে রাঙানো ফেব্রুয়ারি\nআমি কি ভুলিতে পারি।",
+        excerpt: "আমার ভাইয়ের রক্তে রাঙানো একুশে ফেব্রুয়ারি আমি কি ভুলিতে পারি..."
+      },
+      {
+        title: "প্রকৃতির খেলা",
+        poet: "কামিনী রায়",
+        category: "প্রকৃতি",
+        body: "সবুজ পাতায় রোদের খেলা,\nফুলের উপর মৌমাছি ওড়া।\nনদীর জলে চাঁদের আলো,\nরাতের বুকে তারা জ্বলা।\n\nএই তো প্রকৃতির অমল খেলা।",
+        excerpt: "সবুজ পাতায় রোদের খেলা, ফুলের উপর মৌমাছি ওড়া..."
+      },
+      {
+        title: "তুমি ও আমি",
+        poet: "সমকালীন",
+        category: "প্রেম",
+        body: "তুমি আকাশ,\nআমি মেঘ।\nতুমি সমুদ্র,\nআমি ঢেউ।\n\nতুমি যত দূরে যাও,\nআমি তত কাছে আসি।",
+        excerpt: "তুমি আকাশ, আমি মেঘ। তুমি সমুদ্র, আমি ঢেউ..."
+      }
+    ];
+
+    const categories = [
+      { name: "প্রেম", icon: "❤️" },
+      { name: "প্রকৃতি", icon: "🌿" },
+      { name: "দেশ", icon: "🇧🇩" },
+      { name: "জীবন", icon: "✨" },
+      { name: "বিদ্রোহ", icon: "🔥" },
+      { name: "অন্যান্য", icon: "📜" }
+    ];
+
+    /* ===================== STATE ===================== */
+    let poems = [];
+    let currentFilter = "all";
+    let searchQuery = "";
+    let currentSharePoem = null;
+
+    /* ===================== DOM ELEMENTS ===================== */
+    const dailyPoemEl = document.getElementById("dailyPoem");
+    const categoriesEl = document.getElementById("categories");
+    const featuredPoemsEl = document.getElementById("featuredPoems");
+    const allPoemsEl = document.getElementById("allPoems");
+    const searchInput = document.getElementById("searchInput");
+    const filtersEl = document.getElementById("filters");
+    const poemModal = document.getElementById("poemModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPoet = document.getElementById("modalPoet");
+    const modalBody = document.getElementById("modalBody");
+    const modalClose = document.getElementById("modalClose");
+    const themeToggle = document.getElementById("themeToggle");
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const toast = document.getElementById("toast");
+    const poemForm = document.getElementById("poemForm");
+
+    /* ===================== HELPERS ===================== */
+    // অ্যাডমিনের ইমেইল — firestore.rules এও একই ইমেইল দিন
+    const ADMIN_EMAIL = "mirajahmad1910@gmail.com";
+    const $ = id => document.getElementById(id);
+    const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const bn = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
+    const ICON = {
+      heart: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>',
+      bookmark: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>'
+    };
+    const store = {
+      get(k) { try { return JSON.parse(localStorage.getItem(k)) || []; } catch { return []; } },
+      set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+    };
+    let favs = new Set(store.get("podyopath-favs"));
+    let liked = new Set(store.get("podyopath-liked"));
+    const byDate = (a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0);
+    const localDefaults = () => defaultPoems.map((p, i) => ({ id: "local-" + i, status: "approved", likes: 0, ...p }));
+
+    /* ===================== FIRESTORE FUNCTIONS ===================== */
+    async function loadPoems() {
+      try {
+        const snap = await db.collection("poems").where("status", "==", "approved").get();
+        poems = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort(byDate);
+        if (!poems.length) poems = localDefaults();
+      } catch (err) {
+        console.error("Error loading poems:", err);
+        showToast("কবিতা লোড করতে সমস্যা হয়েছে");
+        poems = localDefaults();
+      }
+      renderDailyPoem();
+      renderFeatured();
+      renderAllPoems();
+      if (/^#(poet|poem)=/.test(location.hash)) route();
+    }
+
+    async function addPoemToFirestore(poemData) {
+      const docRef = await db.collection("poems").add({
+        ...poemData,
+        status: "pending",
+        likes: 0,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      return docRef.id;
+    }
+
+    /* ===================== RENDER FUNCTIONS ===================== */
+    function renderDailyPoem() {
+      if (poems.length === 0) {
+        dailyPoemEl.innerHTML = `<p style="color:var(--text-soft)">কবিতা লোড হচ্ছে...</p>`;
+        return;
+      }
+      const now = new Date();
+      const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 864e5);
+      const poem = poems[dayOfYear % poems.length];
+      dailyPoemEl.innerHTML = `
+        <span class="daily-label">আজকের বাছাই</span>
+        <h2>${esc(poem.title)}</h2>
+        <div class="poet">— ${esc(poem.poet)}</div>
+        <div class="poem-body">${esc(poem.body)}</div>
+      `;
+    }
+
+    function renderCategories() {
+      categoriesEl.innerHTML = categories.map(cat => `
+        <div class="cat-card" onclick="filterByCategory('${cat.name}')">
+          <div class="icon">${cat.icon}</div>
+          <h3>${cat.name}</h3>
+        </div>
+      `).join("");
+    }
+
+    function renderFeatured() {
+      const featured = poems.slice(0, 3);
+      featuredPoemsEl.innerHTML = featured.map(p => poemCardHTML(p)).join("");
+    }
+
+    const PAGE_SIZE = 9;
+    let currentPage = 1, poetPage = 1;
+    const norm = s => String(s ?? "").normalize("NFC").replace(/[\u200c\u200d]/g, "").toLowerCase();
+
+    // কবি + শিরোনাম + বিষয় + কবিতার শব্দ; সব শব্দ মিলতে হবে, প্রাসঙ্গিকতা অনুযায়ী সাজানো
+    function searchPoems(list, query) {
+      const tokens = norm(query).split(/[\s,.;:!?।"'’‘“”()\-—]+/).filter(Boolean);
+      if (!tokens.length) return list;
+      return list.map(p => {
+        const f = { t: norm(p.title), a: norm(p.poet), c: norm(p.category), b: norm(p.body) };
+        let score = 0;
+        for (const k of tokens) {
+          const w = (f.t.includes(k) ? 5 : 0) + (f.a.includes(k) ? 4 : 0) + (f.c.includes(k) ? 3 : 0) + (f.b.includes(k) ? 1 : 0);
+          if (!w) return null;
+          score += w;
+        }
+        return { p, score };
+      }).filter(Boolean).sort((x, y) => y.score - x.score).map(r => r.p);
+    }
+
+    function pagerHTML(total, page, target) {
+      const pages = Math.ceil(total / PAGE_SIZE);
+      if (pages <= 1) return "";
+      const nums = [...new Set([1, pages, page - 1, page, page + 1])].filter(n => n >= 1 && n <= pages).sort((a, b) => a - b);
+      const btn = (n, label, extra = "", aria = "") => `<button type="button" class="pg-btn${extra}" data-page="${n}" data-target="${target}" ${aria}>${label}</button>`;
+      let html = btn(page - 1, "‹", "", `${page === 1 ? "disabled" : ""} aria-label="আগের পাতা"`), prev = 0;
+      nums.forEach(n => {
+        if (n - prev > 1) html += `<span class="pg-gap">…</span>`;
+        html += btn(n, bn(n), n === page ? " active" : "", n === page ? 'aria-current="page"' : "");
+        prev = n;
+      });
+      return html + btn(page + 1, "›", "", `${page === pages ? "disabled" : ""} aria-label="পরের পাতা"`);
+    }
+
+    const skeletonCard = () => `
+      <div class="poem-card sk-card" aria-hidden="true">
+        <span class="sk" style="width:58px;height:22px;margin-bottom:.9rem"></span>
+        <span class="sk" style="width:72%;height:24px;margin-bottom:.7rem"></span>
+        <span class="sk" style="width:40%;height:15px;margin-bottom:1.1rem"></span>
+        <span class="sk" style="width:100%;height:13px;margin-bottom:.5rem"></span>
+        <span class="sk" style="width:82%;height:13px"></span>
+      </div>`;
+    const skeletonCards = n => Array.from({ length: n }, skeletonCard).join("");
+    function showSkeletons() {
+      dailyPoemEl.innerHTML = `<div aria-hidden="true"><span class="sk" style="width:110px;height:20px;margin-bottom:1rem"></span><span class="sk" style="width:55%;height:30px;margin-bottom:.8rem"></span><span class="sk" style="width:30%;height:16px;margin-bottom:1.4rem"></span><span class="sk" style="width:90%;height:14px;margin-bottom:.6rem"></span><span class="sk" style="width:75%;height:14px"></span></div>`;
+      featuredPoemsEl.innerHTML = skeletonCards(3);
+      allPoemsEl.innerHTML = skeletonCards(6);
+    }
+
+    function renderAllPoems() {
+      let list = poems;
+      if (currentFilter === "__fav") list = list.filter(p => favs.has(p.id));
+      else if (currentFilter !== "all") list = list.filter(p => p.category === currentFilter);
+      const searching = norm(searchQuery).trim().length > 0;
+      list = searchPoems(list, searchQuery);
+
+      const pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+      currentPage = Math.min(Math.max(1, currentPage), pages);
+      $("resultInfo").textContent = list.length ? (searching ? `${bn(list.length)}টি কবিতা পাওয়া গেছে` : `মোট ${bn(list.length)}টি কবিতা`) : "";
+
+      if (!list.length) {
+        allPoemsEl.innerHTML = `<div class="empty-state">${currentFilter === "__fav" ? "এখনো কিছু সংরক্ষণ করেননি। কবিতার কার্ডে বুকমার্ক চিহ্নে চাপ দিন।" : "কোনো কবিতা পাওয়া যায়নি। কবি, শিরোনাম বা অন্য শব্দ দিয়ে খুঁজে দেখুন।"}</div>`;
+        $("pager").innerHTML = "";
+        return;
+      }
+      allPoemsEl.innerHTML = list.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE).map(p => poemCardHTML(p)).join("");
+      $("pager").innerHTML = pagerHTML(list.length, currentPage, "all");
+    }
+
+    function renderPoet() {
+      const m = location.hash.match(/^#poet=(.+)$/);
+      if (!m) return;
+      let name;
+      try { name = decodeURIComponent(m[1]); } catch { return; }
+      if (!poems.length) {
+        $("poetHero").innerHTML = `<div class="sk" style="width:68px;height:68px;border-radius:50%"></div><div style="flex:1"><span class="sk" style="width:45%;height:26px;margin-bottom:.7rem"></span><span class="sk" style="width:30%;height:15px"></span></div>`;
+        $("poetPoems").innerHTML = skeletonCards(3);
+        $("poetPager").innerHTML = "";
+        return;
+      }
+      const list = poems.filter(p => p.poet === name);
+      const likes = list.reduce((n, p) => n + (p.likes || 0), 0);
+      const cats = [...new Set(list.map(p => p.category || "অন্যান্য"))];
+      $("poetHero").innerHTML = `
+        <div class="poet-avatar" aria-hidden="true">${esc(Array.from(name)[0] || "ক")}</div>
+        <div>
+          <h2>${esc(name)}</h2>
+          <p>${bn(list.length)}টি কবিতা · ${bn(likes)} পছন্দ</p>
+          <div>${cats.map(c => `<span class="tag" style="margin:.5rem .4rem 0 0">${esc(c)}</span>`).join("")}</div>
+        </div>`;
+      if (!list.length) {
+        $("poetPoems").innerHTML = `<div class="empty-state">এই কবির কোনো কবিতা পাওয়া যায়নি।</div>`;
+        $("poetPager").innerHTML = "";
+        return;
+      }
+      const pages = Math.ceil(list.length / PAGE_SIZE);
+      poetPage = Math.min(Math.max(1, poetPage), pages);
+      $("poetPoems").innerHTML = list.slice((poetPage - 1) * PAGE_SIZE, poetPage * PAGE_SIZE).map(p => poemCardHTML(p)).join("");
+      $("poetPager").innerHTML = pagerHTML(list.length, poetPage, "poet");
+    }
+
+    function poemCardHTML(p) {
+      const fav = favs.has(p.id);
+      const excerpt = p.excerpt || (p.body ? p.body.substring(0, 80) + "..." : "");
+      return `
+        <article class="poem-card" data-id="${esc(p.id)}" tabindex="0" role="button">
+          <span class="tag">${esc(p.category || "অন্যান্য")}</span>
+          <h3>${esc(p.title)}</h3>
+          <div class="poet-name"><a class="poet-link" href="#poet=${encodeURIComponent(p.poet)}" data-poet="${esc(p.poet)}">${esc(p.poet)}</a></div>
+          <div class="excerpt">${esc(excerpt)}</div>
+          <div class="card-footer">
+            <div class="card-meta">
+              <span class="mini-btn" title="পছন্দ">${ICON.heart} ${bn(p.likes || 0)}</span>
+              <button type="button" class="mini-btn ${fav ? "on" : ""}" data-fav="${esc(p.id)}" aria-pressed="${fav}" aria-label="সংরক্ষণ">${ICON.bookmark}</button>
+            </div>
+            <span>পড়ুন →</span>
+          </div>
+        </article>
+      `;
+    }
+
+    /* ===================== INTERACTIONS ===================== */
+    function openPoem(id) {
+      const poem = poems.find(p => p.id === id);
+      if (!poem) return;
+      currentSharePoem = poem;
+      modalTitle.textContent = poem.title;
+      modalPoet.innerHTML = '— <a class="poet-link" href="#poet=' + encodeURIComponent(poem.poet) + '" data-poet="' + esc(poem.poet) + '">' + esc(poem.poet) + '</a>';
+      modalBody.textContent = poem.body;
+      syncModalActions();
+      if (!location.hash.startsWith("#poem=")) hashBeforeModal = location.hash;
+      if (!String(id).startsWith("local-")) history.replaceState(null, "", location.pathname + location.search + "#poem=" + encodeURIComponent(id));
+      poemModal.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    let hashBeforeModal = "";
+    function closeModal() {
+      if (location.hash.startsWith("#poem=")) history.replaceState(null, "", location.pathname + location.search + hashBeforeModal);
+      hashBeforeModal = "";
+      poemModal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    function showSection(section) {
+      ["home", "poems", "submit", "about", "poet", "admin"].forEach(s => {
+        document.getElementById(s + "-section").style.display = "none";
+      });
+      document.getElementById(section + "-section").style.display = "block";
+
+      document.querySelectorAll(".nav-links a").forEach(a => {
+        a.classList.toggle("active", a.dataset.section === section);
+      });
+
+      mobileMenu.classList.remove("open");
+      if (section !== "poet" && section !== "admin" && location.hash) history.replaceState(null, "", location.pathname + location.search);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      if (section === "poems") renderAllPoems();
+    }
+
+    function filterByCategory(cat) {
+      currentPage = 1;
+      currentFilter = cat === "অন্যান্য" ? "all" : cat;
+      showSection("poems");
+      document.querySelectorAll("#filters .filter-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.filter === currentFilter);
+      });
+    }
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 3500);
+    }
+
+    function poemUrl(p) {
+      const base = window.location.href.split("#")[0];
+      return String(p.id).startsWith("local-") ? base : base + "#poem=" + encodeURIComponent(p.id);
+    }
+
+    function sharePoem(platform) {
+      if (!currentSharePoem) return;
+
+      const title = currentSharePoem.title;
+      const poet = currentSharePoem.poet;
+      const text = `"${title}" — ${poet}\n\nপদ্যপথ থেকে পড়ুন`;
+      const url = poemUrl(currentSharePoem);
+
+      if (platform === "facebook") {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`, "_blank", "width=600,height=400");
+      } else if (platform === "twitter") {
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, "_blank", "width=600,height=400");
+      } else if (platform === "whatsapp") {
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + "\n" + url)}`, "_blank");
+      } else if (platform === "copy") {
+        const fullText = `${title}\n— ${poet}\n\n${currentSharePoem.body}\n\n— পদ্যপথ`;
+        navigator.clipboard.writeText(fullText).then(() => {
+          showToast("কবিতা কপি হয়েছে!");
+        }).catch(() => showToast("কপি করতে সমস্যা হয়েছে"));
+      }
+    }
+
+    /* ===================== LIKE · FAVORITE · IMAGE CARD ===================== */
+    function syncModalActions() {
+      const p = currentSharePoem;
+      if (!p) return;
+      const isLiked = liked.has(p.id), isFav = favs.has(p.id);
+      $("likeBtn").classList.toggle("on", isLiked);
+      $("likeBtn").setAttribute("aria-pressed", isLiked);
+      $("likeCount").textContent = bn(p.likes || 0);
+      $("favBtn").classList.toggle("on", isFav);
+      $("favBtn").setAttribute("aria-pressed", isFav);
+      $("favBtn").querySelector("span").textContent = isFav ? "সংরক্ষিত" : "সংরক্ষণ";
+    }
+
+    function refreshCards() {
+      renderFeatured();
+      renderAllPoems();
+    }
+
+    function toggleFav(id) {
+      const added = !favs.has(id);
+      added ? favs.add(id) : favs.delete(id);
+      store.set("podyopath-favs", [...favs]);
+      syncModalActions();
+      refreshCards();
+      showToast(added ? "সংরক্ষিত তালিকায় যোগ হয়েছে" : "সংরক্ষিত তালিকা থেকে সরানো হয়েছে");
+    }
+
+    async function toggleLike() {
+      const p = currentSharePoem;
+      if (!p) return;
+      const had = liked.has(p.id), delta = had ? -1 : 1;
+      const apply = (d, nowLiked) => {
+        nowLiked ? liked.add(p.id) : liked.delete(p.id);
+        p.likes = Math.max(0, (p.likes || 0) + d);
+        store.set("podyopath-liked", [...liked]);
+        syncModalActions();
+        refreshCards();
+      };
+      apply(delta, !had);
+      if (String(p.id).startsWith("local-")) return;
+      try {
+        await db.collection("poems").doc(p.id).update({ likes: firebase.firestore.FieldValue.increment(delta) });
+      } catch (err) {
+        console.error(err);
+        apply(-delta, had); // rollback
+        showToast("পছন্দ সংরক্ষণ করা যায়নি");
+      }
+    }
+
+    async function downloadCard() {
+      const p = currentSharePoem;
+      if (!p) return;
+      try {
+        await Promise.all([document.fonts.load('400 40px "Noto Sans Bengali"'), document.fonts.load('700 40px "Noto Sans Bengali"')]);
+        const cs = getComputedStyle(document.documentElement);
+        const v = n => cs.getPropertyValue(n).trim();
+        const W = 1080, H = 1350, PAD = 100, MAXW = W - PAD * 2;
+        const font = '"Noto Sans Bengali", system-ui, sans-serif';
+        const c = document.createElement("canvas");
+        c.width = W; c.height = H;
+        const x = c.getContext("2d");
+
+        const wrap = (text, maxW) => {
+          const out = [];
+          text.split("\n").forEach(par => {
+            if (!par.trim()) { out.push(""); return; }
+            let line = "";
+            par.split(/\s+/).forEach(w => {
+              const t = line ? line + " " + w : w;
+              if (x.measureText(t).width > maxW && line) { out.push(line); line = w; } else line = t;
+            });
+            out.push(line);
+          });
+          return out;
+        };
+
+        x.fillStyle = v("--bg"); x.fillRect(0, 0, W, H);
+        x.strokeStyle = v("--accent"); x.lineWidth = 2; x.strokeRect(44, 44, W - 88, H - 88);
+
+        let y = 190;
+        x.fillStyle = v("--accent"); x.font = `600 30px ${font}`;
+        x.fillText(p.category || "কবিতা", PAD, y);
+
+        y += 100;
+        x.fillStyle = v("--primary"); x.font = `700 68px ${font}`;
+        wrap(p.title, MAXW).forEach(l => { x.fillText(l, PAD, y); y += 92; });
+
+        y += 4;
+        x.fillStyle = v("--accent"); x.font = `600 36px ${font}`;
+        x.fillText("— " + p.poet, PAD, y);
+
+        y += 50;
+        x.fillStyle = v("--accent"); x.fillRect(PAD, y, 90, 3);
+
+        y += 80;
+        x.fillStyle = v("--text"); x.font = `400 40px ${font}`;
+        const LH = 70, bottom = H - 230;
+        let lines = wrap(p.body, MAXW);
+        const maxLines = Math.max(1, Math.floor((bottom - y) / LH));
+        if (lines.length > maxLines) { lines = lines.slice(0, maxLines); lines[maxLines - 1] += " …"; }
+        lines.forEach(l => { x.fillText(l, PAD, y); y += LH; });
+
+        x.fillStyle = v("--primary"); x.font = `700 46px ${font}`;
+        x.fillText("পদ্যপথ", PAD, H - 120);
+        x.fillStyle = v("--text-soft"); x.font = `400 28px ${font}`;
+        x.textAlign = "right";
+        x.fillText("বাংলা কবিতার আসর", W - PAD, H - 120);
+
+        c.toBlob(blob => {
+          if (!blob) { showToast("ছবি তৈরি করা যায়নি"); return; }
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = "podyopath-card.png";
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+          showToast("ছবি কার্ড ডাউনলোড হয়েছে");
+        }, "image/png");
+      } catch (err) {
+        console.error(err);
+        showToast("ছবি তৈরি করা যায়নি");
+      }
+    }
+
+    /* ===================== ADMIN (moderation) ===================== */
+    let adminTab = "pending", adminDocs = [];
+
+    async function loadAdmin() {
+      try {
+        const snap = await db.collection("poems").get();
+        adminDocs = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort(byDate);
+        renderAdmin();
+      } catch (err) {
+        console.error(err);
+        showToast("তথ্য আনা যায়নি। Firestore Rules ও অ্যাডমিন ইমেইল যাচাই করুন");
+      }
+    }
+
+    function adminItemHTML(p) {
+      const date = p.createdAt?.toDate ? p.createdAt.toDate().toLocaleDateString("bn-BD") : "";
+      const id = esc(p.id);
+      const actions = p.status === "pending"
+        ? `<button class="btn btn-outline btn-sm" data-admin="edit" data-id="${id}">সম্পাদনা</button>
+           <button class="btn btn-primary btn-sm" data-admin="approve" data-id="${id}">অনুমোদন দিন</button>
+           <button class="btn btn-danger btn-sm" data-admin="delete" data-id="${id}">মুছুন</button>`
+        : `<button class="btn btn-outline btn-sm" data-admin="edit" data-id="${id}">সম্পাদনা</button>
+           <button class="btn btn-outline btn-sm" data-admin="unpublish" data-id="${id}">অপ্রকাশিত করুন</button>
+           <button class="btn btn-danger btn-sm" data-admin="delete" data-id="${id}">মুছুন</button>`;
+      return `
+        <article class="admin-item">
+          <div class="admin-head"><span class="tag">${esc(p.category || "অন্যান্য")}</span><span>${esc(date)}</span></div>
+          <h3>${esc(p.title)}</h3>
+          <div class="poet-name">${esc(p.poet)}</div>
+          <div class="poem-body">${esc(p.body)}</div>
+          <div class="admin-actions">${actions}</div>
+        </article>`;
+    }
+
+    function renderAdmin() {
+      const pending = adminDocs.filter(p => p.status === "pending");
+      const approved = adminDocs.filter(p => p.status === "approved");
+      const legacy = adminDocs.filter(p => !p.status);
+      $("pendingCount").textContent = bn(pending.length);
+      $("approvedCount").textContent = bn(approved.length);
+      $("legacyNotice").innerHTML = legacy.length ? `
+        <div class="admin-item">
+          <p style="margin-bottom:0.9rem">${bn(legacy.length)}টি পুরনো কবিতায় স্ট্যাটাস নেই, তাই সেগুলো সাইটে দেখা যাচ্ছে না।</p>
+          <button class="btn btn-primary btn-sm" data-admin="migrate">সবগুলো প্রকাশ করুন</button>
+        </div>` : "";
+      if (adminTab === "new") { $("adminList").innerHTML = adminFormHTML(); return; }
+      const list = adminTab === "pending" ? pending : approved;
+      $("adminList").innerHTML = list.length
+        ? list.map(adminItemHTML).join("")
+        : `<div class="empty-state">${adminTab === "pending" ? "যাচাইয়ের অপেক্ষায় কোনো কবিতা নেই।" : "এখনো কিছু প্রকাশিত হয়নি।"}</div>`;
+    }
+
+    let adminEditId = null;
+
+    function setAdminTab(tab) {
+      adminTab = tab;
+      document.querySelectorAll("#adminTabs .filter-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tab));
+      renderAdmin();
+    }
+
+    function adminFormHTML() {
+      const p = adminEditId ? adminDocs.find(x => x.id === adminEditId) : null;
+      const poets = [...new Set(adminDocs.map(x => x.poet).filter(Boolean))];
+      const opts = Array.from($("category").options).filter(o => o.value)
+        .map(o => `<option value="${esc(o.value)}" ${o.value === (p && p.category) ? "selected" : ""}>${esc(o.value)}</option>`).join("");
+      return `
+        <form id="adminPoemForm" class="form-card" style="margin:0">
+          <h3 style="margin-bottom:1.2rem;color:var(--primary)">${p ? "কবিতা সম্পাদনা" : "নতুন কবিতা যোগ করুন"}</h3>
+          <div class="form-group">
+            <label for="apPoet">কবির নাম</label>
+            <input id="apPoet" name="poet" list="apPoets" required maxlength="60" value="${esc(p ? p.poet : "")}" />
+            <datalist id="apPoets">${poets.map(n => `<option value="${esc(n)}"></option>`).join("")}</datalist>
+          </div>
+          <div class="form-group">
+            <label for="apTitle">কবিতার নাম</label>
+            <input id="apTitle" name="title" required maxlength="120" value="${esc(p ? p.title : "")}" />
+          </div>
+          <div class="form-group">
+            <label for="apCat">বিষয়</label>
+            <select id="apCat" name="category">${opts}</select>
+          </div>
+          <div class="form-group">
+            <label for="apBody">কবিতা</label>
+            <textarea id="apBody" name="body" required maxlength="5000" rows="10">${esc(p ? p.body : "")}</textarea>
+          </div>
+          <div class="admin-actions">
+            <button type="submit" class="btn btn-primary">${p ? "আপডেট করুন" : "প্রকাশ করুন"}</button>
+            ${p ? `<button type="button" class="btn btn-outline" data-admin="cancel-edit">বাতিল</button>` : ""}
+          </div>
+        </form>`;
+    }
+
+    async function saveAdminPoem(form) {
+      const f = new FormData(form);
+      const body = String(f.get("body")).trim();
+      const data = {
+        title: String(f.get("title")).trim(),
+        poet: String(f.get("poet")).trim(),
+        category: String(f.get("category")),
+        body,
+        excerpt: body.replace(/\s+/g, " ").substring(0, 80) + (body.length > 80 ? "..." : "")
+      };
+      if (!data.title || !data.poet || !body) { showToast("সব ঘর পূরণ করুন"); return; }
+      const btn = form.querySelector('[type="submit"]');
+      btn.disabled = true;
+      try {
+        const col = db.collection("poems");
+        if (adminEditId) await col.doc(adminEditId).update(data);
+        else await col.add({ ...data, status: "approved", likes: 0, createdAt: firebase.firestore.FieldValue.serverTimestamp() });
+        showToast(adminEditId ? "কবিতা আপডেট হয়েছে" : "কবিতা প্রকাশিত হয়েছে");
+        adminEditId = null;
+        await Promise.all([loadAdmin(), loadPoems()]);
+        setAdminTab("approved");
+      } catch (err) {
+        console.error(err);
+        showToast("সংরক্ষণ হয়নি। Firestore Rules যাচাই করুন");
+        btn.disabled = false;
+      }
+    }
+
+    async function adminAction(action, id) {
+      if (action === "edit") { adminEditId = id; setAdminTab("new"); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
+      if (action === "cancel-edit") { adminEditId = null; setAdminTab("approved"); return; }
+      try {
+        const col = db.collection("poems");
+        if (action === "approve") await col.doc(id).update({ status: "approved", likes: adminDocs.find(p => p.id === id)?.likes || 0 });
+        else if (action === "unpublish") await col.doc(id).update({ status: "pending" });
+        else if (action === "delete") {
+          if (!confirm("কবিতাটি স্থায়ীভাবে মুছে ফেলবেন?")) return;
+          await col.doc(id).delete();
+        } else if (action === "migrate") {
+          const batch = db.batch();
+          adminDocs.filter(p => !p.status).forEach(p => batch.update(col.doc(p.id), { status: "approved", likes: p.likes || 0 }));
+          await batch.commit();
+        }
+        await Promise.all([loadAdmin(), loadPoems()]);
+        showToast("সম্পন্ন হয়েছে");
+      } catch (err) {
+        console.error(err);
+        showToast("কাজটি সম্পন্ন হয়নি। আবার চেষ্টা করুন");
+      }
+    }
+
+    function route() {
+      if (location.hash === "#admin") showSection("admin");
+      else if (location.hash.startsWith("#poem=")) {
+        if (!poems.length) return; // ডেটা আসার পর loadPoems আবার route() চালাবে
+        let id = "";
+        try { id = decodeURIComponent(location.hash.slice(6)); } catch {}
+        if (poemModal.classList.contains("open") && currentSharePoem && currentSharePoem.id === id) return;
+        if (poems.some(p => p.id === id)) openPoem(id);
+        else { showToast("কবিতাটি পাওয়া যায়নি"); history.replaceState(null, "", location.pathname + location.search); }
+      } else if (location.hash.startsWith("#poet=")) { poetPage = 1; showSection("poet"); renderPoet(); }
+    }
+
+    function setupExtras() {
+      document.addEventListener("click", e => {
+        const pg = e.target.closest("[data-page]");
+        if (pg) {
+          if (pg.disabled) return;
+          const n = Number(pg.dataset.page);
+          if (pg.dataset.target === "poet") { poetPage = n; renderPoet(); $("poetHero").scrollIntoView({ behavior: "smooth" }); }
+          else { currentPage = n; renderAllPoems(); $("filters").scrollIntoView({ behavior: "smooth" }); }
+          return;
+        }
+        const pl = e.target.closest("[data-poet]");
+        if (pl) {
+          e.preventDefault(); e.stopPropagation(); closeModal();
+          location.hash = "poet=" + encodeURIComponent(pl.dataset.poet);
+          return;
+        }
+        const fav = e.target.closest("[data-fav]");
+        if (fav) { e.stopPropagation(); toggleFav(fav.dataset.fav); return; }
+        const card = e.target.closest(".poem-card[data-id]");
+        if (card) openPoem(card.dataset.id);
+      });
+      document.addEventListener("keydown", e => {
+        if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".poem-card[data-id]")) {
+          e.preventDefault();
+          openPoem(e.target.dataset.id);
+        }
+      });
+      $("likeBtn").addEventListener("click", toggleLike);
+      $("favBtn").addEventListener("click", () => currentSharePoem && toggleFav(currentSharePoem.id));
+      $("cardBtn").addEventListener("click", downloadCard);
+      $("linkBtn").addEventListener("click", () => {
+        if (!currentSharePoem) return;
+        navigator.clipboard.writeText(poemUrl(currentSharePoem))
+          .then(() => showToast("লিংক কপি হয়েছে"))
+          .catch(() => showToast("কপি করতে সমস্যা হয়েছে"));
+      });
+
+      $("loginForm").addEventListener("submit", async e => {
+        e.preventDefault();
+        const btn = $("loginBtn");
+        btn.disabled = true;
+        try { await auth.signInWithEmailAndPassword($("adminEmail").value.trim(), $("adminPass").value); }
+        catch { showToast("ইমেইল বা পাসওয়ার্ড সঠিক নয়"); }
+        btn.disabled = false;
+      });
+      $("logoutBtn").addEventListener("click", () => auth.signOut());
+      $("adminTabs").addEventListener("click", e => {
+        const t = e.target.closest("[data-tab]");
+        if (!t) return;
+        adminEditId = null;
+        setAdminTab(t.dataset.tab);
+      });
+      $("admin-section").addEventListener("submit", e => {
+        if (e.target.id === "adminPoemForm") { e.preventDefault(); saveAdminPoem(e.target); }
+      });
+      $("admin-section").addEventListener("click", e => {
+        const b = e.target.closest("[data-admin]");
+        if (b) adminAction(b.dataset.admin, b.dataset.id);
+      });
+      auth.onAuthStateChanged(user => {
+        const ok = !!user && user.email === ADMIN_EMAIL;
+        if (user && !ok) { auth.signOut(); showToast("এই অ্যাকাউন্টের অ্যাডমিন অনুমতি নেই"); }
+        $("adminLogin").style.display = ok ? "none" : "block";
+        $("adminPanel").style.display = ok ? "block" : "none";
+        if (ok) loadAdmin();
+      });
+      window.addEventListener("hashchange", route);
+      route();
+    }
+
+    /* ===================== EVENT LISTENERS ===================== */
+    function setupEventListeners() {
+      // Theme
+      themeToggle.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("podyopath-theme", next);
+      });
+
+      // Hamburger
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+
+      // Nav links
+      document.querySelectorAll("[data-section]").forEach(el => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          showSection(el.dataset.section);
+        });
+      });
+
+      // Search
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        currentPage = 1;
+        renderAllPoems();
+      });
+
+      // Filters
+      filtersEl.addEventListener("click", (e) => {
+        if (e.target.classList.contains("filter-btn")) {
+          currentFilter = e.target.dataset.filter;
+          currentPage = 1;
+          document.querySelectorAll("#filters .filter-btn").forEach(b => b.classList.remove("active"));
+          e.target.classList.add("active");
+          renderAllPoems();
+        }
+      });
+
+      // Modal
+      modalClose.addEventListener("click", closeModal);
+      poemModal.addEventListener("click", (e) => {
+        if (e.target === poemModal) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      // Form submit
+      poemForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("poetName").value.trim();
+        const title = document.getElementById("poemTitle").value.trim();
+        const category = document.getElementById("category").value;
+        const body = document.getElementById("poemBody").value.trim();
+        const submitBtn = document.getElementById("submitBtn");
+
+        if (!name || !title || !body) {
+          showToast("সব ঘর পূরণ করুন");
+          return;
+        }
+
+        if (poemForm.querySelector('[name="_gotcha"]').value) return; // spam trap
+        const last = Number(localStorage.getItem("podyopath-last-submit") || 0);
+        if (Date.now() - last < 60000) {
+          showToast("একটু অপেক্ষা করে আবার জমা দিন");
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "পাঠানো হচ্ছে...";
+
+        try {
+          // 1. Save to Firestore
+          const poemData = {
+            title,
+            poet: name,
+            category,
+            body,
+            excerpt: body.substring(0, 80) + "..."
+          };
+          await addPoemToFirestore(poemData);
+
+          // 2. Also send to Formspree (email notification)
+          try {
+            const formData = new FormData(poemForm);
+            await fetch(poemForm.action, {
+              method: "POST",
+              body: formData,
+              headers: { "Accept": "application/json" }
+            });
+          } catch (formErr) {
+            console.warn("Formspree error:", formErr);
+          }
+
+          localStorage.setItem("podyopath-last-submit", String(Date.now()));
+          poemForm.reset();
+          showToast("কবিতা জমা হয়েছে। যাচাইয়ের পর প্রকাশিত হবে।");
+          showSection("home");
+        } catch (err) {
+          console.error(err);
+          showToast("জমা দিতে সমস্যা হয়েছে। আবার চেষ্টা করুন।");
+        }
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = "কবিতা জমা দিন";
+      });
+    }
+
+    /* ===================== INIT ===================== */
+    async function init() {
+      // Theme
+      const savedTheme = localStorage.getItem("podyopath-theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+
+      renderCategories();
+      showSkeletons();
+      setupEventListeners();
+      setupExtras();
+
+      // Load poems from Firestore
+      await loadPoems();
+    }
+
+    init();
+  </script>
+</body>
+</html>
